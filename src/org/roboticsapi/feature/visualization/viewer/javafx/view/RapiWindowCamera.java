@@ -19,7 +19,6 @@ import javafx.scene.transform.Translate;
  * 
  * @see RapiWindowTab
  */
-@SuppressWarnings("restriction")
 public class RapiWindowCamera {
 	private Translate transform;
 	private Rotate a;

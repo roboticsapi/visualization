@@ -14,7 +14,6 @@ import javafx.scene.Node;
 /**
  * Represents the visual model
  */
-@SuppressWarnings("restriction")
 public class RapiMesh extends Object3D {
 
 	private final Node[] nodes;

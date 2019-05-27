@@ -20,10 +20,6 @@ import org.roboticsapi.feature.visualization.viewer.navigation.visualization.Obj
 import org.roboticsapi.feature.visualization.viewer.navigation.visualization.Point3D;
 import org.roboticsapi.feature.visualization.viewer.navigation.visualization.Transformation;
 
-import com.sun.javafx.geom.PickRay;
-import com.sun.javafx.geom.Vec3d;
-import com.sun.javafx.geom.transform.Affine3D;
-
 import javafx.application.Platform;
 import javafx.scene.AmbientLight;
 import javafx.scene.DepthTest;
@@ -49,7 +45,6 @@ import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Transform;
 import javafx.scene.transform.Translate;
 
-@SuppressWarnings("restriction")
 public class VisualizationPane extends Control implements FrameSelectionListener {
 
 	private final NavigationManager navigationManager;
@@ -233,20 +228,15 @@ public class VisualizationPane extends Control implements FrameSelectionListener
 		public synchronized Point3D getFirstCollisionPoint(int xposition, int yposition, boolean includeGround) {
 			PerspectiveCamera cam = camera.getCamera();
 			Transform t = cam.getLocalToSceneTransform();
-			Affine3D a = new Affine3D(t.getMxx(), t.getMxy(), t.getMxz(), t.getTx(), t.getMyx(), t.getMyy(), t.getMyz(),
-					t.getTy(), t.getMzx(), t.getMzy(), t.getMzz(), t.getTz());
-			PickRay ray = PickRay.computePerspectivePickRay((double) xposition, (double) yposition,
-					cam.isFixedEyeAtCameraZero(), getWidth(), getHeight(), Math.toRadians(cam.getFieldOfView()),
-					cam.isVerticalFieldOfView(), a, cam.getNearClip(), cam.getFarClip(), null);
-
-			Vec3d origin = ray.getOrigin(null);
-			Vec3d direction = ray.getDirection(null);
+			javafx.geometry.Point3D origin = t.transform(new javafx.geometry.Point3D(0, 0, 0));
+			javafx.geometry.Point3D next = t.transform(new javafx.geometry.Point3D(0, 0, 1));
+			javafx.geometry.Point3D direction = next.subtract(origin);
 
 			if (includeGround) {
-				if (direction.z < 0) {
-					direction.mul(-origin.z / direction.z);
-					origin.add(direction);
-					return new Point3D(origin.x, origin.y, origin.z);
+				if (direction.getZ() < 0) {
+					direction = direction.multiply(-origin.getZ() / direction.getZ());
+					origin = origin.add(direction);
+					return new Point3D(origin.getX(), origin.getY(), origin.getZ());
 				}
 			}
 			return null;

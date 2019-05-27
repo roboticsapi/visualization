@@ -45,7 +45,6 @@ import javafx.scene.Node;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
 
-@SuppressWarnings("restriction")
 public class RapiVisualizationPane extends BorderPane {
 
 	public enum DISPLAY_MODE {

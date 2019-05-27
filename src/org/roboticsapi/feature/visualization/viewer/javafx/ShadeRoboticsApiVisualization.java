@@ -7,12 +7,10 @@
 
 package org.roboticsapi.feature.visualization.viewer.javafx;
 
-import javafx.geometry.Bounds;
+public class ShadeRoboticsApiVisualization {
 
-public interface WindowProperties {
-
-	public Bounds getWindowBounds();
-
-	public boolean getWindowMaximized();
+	public static void main(String[] args) {
+		RoboticsApiVisualization.main(args);
+	}
 
 }

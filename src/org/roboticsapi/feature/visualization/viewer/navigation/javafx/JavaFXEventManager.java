@@ -23,7 +23,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 
-@SuppressWarnings("restriction")
 public final class JavaFXEventManager implements EventManager {
 
 	protected List<EventListener> listeners = new ArrayList<EventListener>();

@@ -25,7 +25,6 @@ import org.roboticsapi.feature.visualization.viewer.navigation.event.EventListen
 import javafx.geometry.BoundingBox;
 import javafx.geometry.Bounds;
 
-@SuppressWarnings("restriction")
 public final class Configuration extends Properties
 		implements NavigationProperties, WindowProperties, CameraProperties {
 	private static final long serialVersionUID = 1L;

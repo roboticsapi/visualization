@@ -19,7 +19,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
-@SuppressWarnings("restriction")
 public class SplitPane extends Pane {
 
 	private static final long ANIMATION_TIME = 200;

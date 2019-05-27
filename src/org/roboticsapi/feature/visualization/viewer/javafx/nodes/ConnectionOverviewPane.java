@@ -51,7 +51,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-@SuppressWarnings("restriction")
 public class ConnectionOverviewPane extends BorderPane implements ConnectionOverviewInterface {
 
 	public static class MyApp extends Application implements ControlListener {

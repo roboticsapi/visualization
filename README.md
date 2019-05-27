@@ -4,10 +4,8 @@ Robotics API Visualization
 This repository contains the Robotics API Visualization, a JavaFX application to visualize 
 robots controlled by the Robotics API.
 
-This branch is meant for use with `Oracle Java SE 8`, and will not work with Java 11 or higher 
-because Oracle no loger ships JavaFX along with its Java Runtime Environment.
-
-Use the branch `modular-java` for a version compatible with Java 11+.
+This branch is meant for use with `Java 11` or newer, and will not work with Java versions 
+that do not support Java modules (e.g. Java 8 or older).
 
 
 Background: Robotics API - "Robotics as an API in a modern programming language"

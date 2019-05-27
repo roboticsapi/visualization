@@ -51,7 +51,6 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-@SuppressWarnings("restriction")
 public class RoboticsApiVisualization extends Application {
 
 	public static void main(String[] args) {

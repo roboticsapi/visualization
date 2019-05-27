@@ -11,7 +11,6 @@ import java.util.Arrays;
 
 import javafx.scene.image.Image;
 
-@SuppressWarnings("restriction")
 public interface ConnectionOverviewInterface {
 
 	public HostID addServer(String host, boolean autoscroll);
