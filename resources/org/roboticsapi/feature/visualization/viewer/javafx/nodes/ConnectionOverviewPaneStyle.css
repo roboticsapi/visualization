@@ -1,0 +1,42 @@
+.nerrors {
+  -fx-background-color: derive(-fx-focus-color, -15%);
+  -fx-padding: 5 8 5 8;
+  -fx-text-fill: white;
+}
+
+.connectivityErrorLabel {
+  -fx-text-fill: white;
+  -fx-padding: 0 3 0 3; 
+}
+
+.hostPane {
+  -fx-text-fill: white;
+}
+
+.hostPane > .title {
+  -fx-background-color: -fx-box-border, -fx-inner-border, -fx-body-color;
+  -fx-background-insets: 0, 1, 2;
+  -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+  /*-fx-padding: 0.166667em 1.166667em 0.25em 0;*/ /* 2 14 3 0 */
+  -fx-color: -fx-focus-color;
+}
+
+.hostPane > .title > .arrow-button .arrow {
+  -fx-background-color: white;
+}
+
+.applicationPane > .title > .arrow-button .arrow {
+  -fx-background-color: white;
+}
+
+.hostPane > *.content, .applicationPane > *.content {
+	-fx-background-color: -fx-box-border, linear-gradient(to bottom, derive(-fx-color,-02%), derive(-fx-color,65%) 12%, derive(-fx-color,23%) 88%, derive(-fx-color,50%) 99%, -fx-box-border);
+	-fx-background-insets: 0, 0 1 1 1;
+	-fx-padding: 0;
+ }
+ 
+.applicationPane > .title {
+	-fx-background-color: rgba(255,190,0, 0.2);
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+}
