@@ -14,6 +14,16 @@
 	</repositories>
 	<dependencies>
 		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>14</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-swing</artifactId>
+			<version>14</version>
+		</dependency>
+		<dependency>
 			<groupId>javafx-visualization-dependency</groupId>
 			<artifactId>jimColModelImporterJFX</artifactId>
 			<version>0.6</version>
